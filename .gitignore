@@ -1,0 +1,6 @@
+node_modules/
+.env
+npm-debug.log*
+public/uploads/rooms/*
+!public/uploads/rooms/.gitkeep
+.DS_Store

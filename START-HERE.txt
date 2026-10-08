@@ -1,0 +1,20 @@
+COLLEGE SCHEDULING AND MANAGEMENT SYSTEM
+
+1) Install Node.js and MongoDB Community Server.
+2) Open PowerShell in this folder.
+3) Run:
+
+   Copy-Item .env.example .env
+
+4) Edit .env and give SESSION_SECRET a long private value (32+ characters).
+5) Run:
+
+   npm.cmd install
+   npm.cmd run create-admin
+   npm.cmd start
+
+6) Open:
+
+   http://localhost:3001
+
+Read README.md for the complete guide and testing checklist.

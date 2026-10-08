@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>College Administration - Sign In</title>
+
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+
+<main class="login-shell">
+
+  <div class="login-content">
+
+    <div class="brand-row">
+
+      <div class="brand-logo">
+        CA
+      </div>
+
+      <div class="brand-name">
+        College Administration
+      </div>
+
+    </div>
+
+
+    <div class="login-top">
+
+      <div class="portal-pill">
+
+        <span class="portal-dot"></span>
+
+        SECURE PORTAL
+
+      </div>
+
+      <div class="version">
+        v3.2.0
+      </div>
+
+    </div>
+
+
+    <h1 class="login-title">
+      Sign in
+    </h1>
+
+    <p class="login-subtitle">
+      Use your email address or username and password.
+    </p>
+
+
+    <div id="message"></div>
+
+
+    <form
+      id="loginForm"
+      class="login-form"
+    >
+
+      <div class="field">
+
+        <label for="identifier">
+          Email or username
+        </label>
+
+        <div class="input-wrap">
+
+          <input
+            id="identifier"
+            name="login"
+            class="input-field"
+            type="text"
+            placeholder="e.g. sarabillo or user@college.edu"
+            autocomplete="username"
+            required
+          >
+
+          <span class="input-icon">
+
+            <svg viewBox="0 0 24 24">
+
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19a6 6 0 00-12 0m6-8a4 4 0 100-8 4 4 0 000 8z"
+              />
+
+            </svg>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <div class="label-row">
+
+          <label for="password">
+            Password
+          </label>
+
+          <a
+            href="#" id="forgotPasswordLink" class="forgot-link"
+          >
+            Forgot password?
+          </a>
+
+        </div>
+
+
+        <div class="input-wrap">
+
+          <input
+            id="password"
+            name="password"
+            class="input-field"
+            type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          >
+
+          <button
+            id="togglePassword"
+            class="input-icon password-toggle"
+            type="button"
+          >
+
+            <svg viewBox="0 0 24 24">
+
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"
+              />
+
+              <circle
+                cx="12"
+                cy="12"
+                r="2.5"
+              />
+
+            </svg>
+
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <label class="remember-row">
+
+        <input
+          type="checkbox"
+          id="rememberMe"
+        >
+
+        Keep me signed in on this device
+
+      </label>
+
+
+      <button
+        id="loginButton"
+        class="login-btn"
+        type="submit"
+      >
+        Login
+      </button>
+
+    </form>
+
+
+    <div class="register-row">
+
+      Need an account?
+
+      <a href="/register">
+        Register an Account
+      </a>
+
+    </div>
+
+
+    <div
+      id="passwordRecovery"
+      class="recovery-box"
+    >
+
+      <div class="recovery-icon">
+
+        <svg viewBox="0 0 24 24">
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M7 10V8a5 5 0 0110 0v2m-11 0h12a1 1 0 011 1v8a1 1 0 01-1 1H6a1 1 0 01-1-1v-8a1 1 0 011-1z"
+          />
+
+        </svg>
+
+      </div>
+
+      <div>
+
+        <strong>Password recovery:</strong>
+
+        Contact the college system administrator to verify your
+        identity and reset your account password. Passwords are
+        never shown or sent in plain text.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<script src="/js/login.js" defer></script>
+<script src="/js/login-ui.js" defer></script>
+
+</body>
+</html>
+

@@ -1,0 +1,917 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>College Administration - Sign In</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --card-bg: #ffffff;
+      --primary-red: #ef4444;
+      --primary-blue: #0284c7;
+      --primary-blue-hover: #0369a1;
+
+      --text-heading: #0f172a;
+      --text-body: #475569;
+      --text-muted: #94a3b8;
+
+      --border-color: #e2e8f0;
+
+      --focus-ring:
+        rgba(2, 132, 199, 0.15);
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+      font-family:
+        'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+    }
+
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 2rem 1rem;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f8fafc 0%,
+          #e2e8f0 100%
+        );
+
+      color: var(--text-body);
+    }
+
+
+    /* ======================================================
+       MAIN LOGIN CONTAINER
+       ====================================================== */
+
+    .login-container {
+      width: 100%;
+      max-width: 980px;
+
+      display: flex;
+      overflow: hidden;
+
+      background: var(--card-bg);
+
+      border:
+        1px solid
+        var(--border-color);
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 20px 40px -15px
+        rgba(15, 23, 42, 0.08),
+        0 0 1px
+        rgba(15, 23, 42, 0.1);
+    }
+
+
+    /* ======================================================
+       LEFT SECTION
+       ====================================================== */
+
+    .brand-section {
+      flex: 1.1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 3rem;
+
+      background: #f8fafc;
+
+      border-right:
+        1px solid
+        var(--border-color);
+    }
+
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+
+      gap: .75rem;
+    }
+
+
+    .brand-logo {
+      padding:
+        .4rem
+        .6rem;
+
+      background:
+        var(--primary-red);
+
+      color: #ffffff;
+
+      border-radius: 6px;
+
+      font-size: .85rem;
+      font-weight: 700;
+
+      letter-spacing: .5px;
+    }
+
+
+    .brand-title {
+      color:
+        var(--text-heading);
+
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+
+    .brand-content {
+      margin:
+        2.5rem
+        0;
+    }
+
+
+    .hero-heading {
+      margin-bottom: 1rem;
+
+      color:
+        var(--text-heading);
+
+      font-size: 1.85rem;
+      font-weight: 700;
+
+      line-height: 1.3;
+
+      letter-spacing:
+        -.02em;
+    }
+
+
+    .hero-description {
+      margin-bottom:
+        1.75rem;
+
+      color:
+        var(--text-body);
+
+      font-size:
+        .925rem;
+
+      line-height:
+        1.6;
+    }
+
+
+    .feature-list {
+      list-style: none;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: .85rem;
+    }
+
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+
+      gap: .75rem;
+
+      color:
+        var(--text-body);
+
+      font-size:
+        .875rem;
+
+      font-weight:
+        500;
+    }
+
+
+    .feature-dot {
+      width: 7px;
+      height: 7px;
+
+      flex-shrink: 0;
+
+      background:
+        #cbd5e1;
+
+      border-radius:
+        50%;
+    }
+
+
+    .brand-footer {
+      color:
+        var(--text-muted);
+
+      font-size:
+        .75rem;
+    }
+
+
+    /* ======================================================
+       RIGHT LOGIN SECTION
+       ====================================================== */
+
+    .form-section {
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding:
+        3.5rem
+        3rem;
+
+      background:
+        #ffffff;
+    }
+
+
+    .portal-tag {
+      margin-bottom:
+        .5rem;
+
+      color:
+        var(--text-muted);
+
+      font-size:
+        .7rem;
+
+      font-weight:
+        700;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        .1em;
+    }
+
+
+    .form-title {
+      margin-bottom:
+        .35rem;
+
+      color:
+        var(--text-heading);
+
+      font-size:
+        1.75rem;
+
+      font-weight:
+        700;
+
+      letter-spacing:
+        -.02em;
+    }
+
+
+    .form-subtitle {
+      margin-bottom:
+        2rem;
+
+      color:
+        var(--text-muted);
+
+      font-size:
+        .875rem;
+    }
+
+
+    /* ======================================================
+       MESSAGE
+       ====================================================== */
+
+    .login-message {
+      display: none;
+
+      margin-bottom:
+        1.25rem;
+
+      padding:
+        .8rem
+        .9rem;
+
+      border-radius:
+        7px;
+
+      font-size:
+        .8rem;
+
+      line-height:
+        1.45;
+    }
+
+
+    .login-message.error {
+      display: block;
+
+      color:
+        #b91c1c;
+
+      background:
+        #fef2f2;
+
+      border:
+        1px solid
+        #fecaca;
+    }
+
+
+    .login-message.success {
+      display: block;
+
+      color:
+        #166534;
+
+      background:
+        #f0fdf4;
+
+      border:
+        1px solid
+        #bbf7d0;
+    }
+
+
+    /* ======================================================
+       FORM
+       ====================================================== */
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+
+      gap:
+        1.25rem;
+    }
+
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+
+      gap:
+        .4rem;
+    }
+
+
+    .input-label {
+      color:
+        var(--text-heading);
+
+      font-size:
+        .8rem;
+
+      font-weight:
+        600;
+    }
+
+
+    .input-wrapper {
+      position:
+        relative;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+    }
+
+
+    .input-field {
+      width:
+        100%;
+
+      padding:
+        .75rem
+        .9rem;
+
+      color:
+        var(--text-heading);
+
+      background:
+        #ffffff;
+
+      border:
+        1px solid
+        var(--border-color);
+
+      border-radius:
+        8px;
+
+      outline:
+        none;
+
+      font-size:
+        .9rem;
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .input-field:focus {
+      border-color:
+        var(--primary-blue);
+
+      box-shadow:
+        0 0 0 3px
+        var(--focus-ring);
+    }
+
+
+    .input-field::placeholder {
+      color:
+        var(--text-muted);
+    }
+
+
+    .btn-submit {
+      margin-top:
+        .5rem;
+
+      padding:
+        .8rem;
+
+      background:
+        var(--primary-blue);
+
+      color:
+        #ffffff;
+
+      border:
+        none;
+
+      border-radius:
+        8px;
+
+      cursor:
+        pointer;
+
+      font-size:
+        .9rem;
+
+      font-weight:
+        600;
+
+      transition:
+        background .2s ease,
+        transform .1s ease;
+    }
+
+
+    .btn-submit:hover {
+      background:
+        var(--primary-blue-hover);
+    }
+
+
+    .btn-submit:active {
+      transform:
+        translateY(1px);
+    }
+
+
+    .btn-submit:disabled {
+      opacity:
+        .65;
+
+      cursor:
+        not-allowed;
+    }
+
+
+    /* ======================================================
+       REGISTER
+       ====================================================== */
+
+    .form-footer-links {
+      margin-top:
+        1rem;
+
+      text-align:
+        center;
+
+      color:
+        var(--text-muted);
+
+      font-size:
+        .85rem;
+    }
+
+
+    .form-footer-links a {
+      color:
+        var(--primary-blue);
+
+      text-decoration:
+        none;
+
+      font-weight:
+        500;
+    }
+
+
+    .form-footer-links a:hover {
+      text-decoration:
+        underline;
+    }
+
+
+    /* ======================================================
+       PASSWORD RECOVERY
+       ====================================================== */
+
+    .recovery-box {
+      margin-top:
+        2rem;
+
+      padding-top:
+        1.5rem;
+
+      border-top:
+        1px solid
+        var(--border-color);
+
+      color:
+        var(--text-muted);
+
+      font-size:
+        .75rem;
+
+      line-height:
+        1.5;
+    }
+
+
+    .recovery-box strong {
+      color:
+        var(--text-body);
+
+      font-weight:
+        600;
+    }
+
+
+    /* ======================================================
+       RESPONSIVE
+       ====================================================== */
+
+    @media (max-width: 840px) {
+
+      .login-container {
+        flex-direction:
+          column;
+
+        max-width:
+          480px;
+      }
+
+
+      .brand-section {
+        padding:
+          2rem;
+
+        border-right:
+          none;
+
+        border-bottom:
+          1px solid
+          var(--border-color);
+      }
+
+
+      .form-section {
+        padding:
+          2.5rem
+          2rem;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      body {
+        padding:
+          1rem;
+      }
+
+
+      .brand-section {
+        padding:
+          1.5rem;
+      }
+
+
+      .form-section {
+        padding:
+          2rem
+          1.5rem;
+      }
+
+
+      .hero-heading {
+        font-size:
+          1.55rem;
+      }
+
+
+      .form-title {
+        font-size:
+          1.5rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div class="login-container">
+
+
+    <!-- ====================================================
+         LEFT SIDE
+         ==================================================== -->
+
+    <section class="brand-section">
+
+      <div>
+
+
+        <div class="brand-header">
+
+          <span class="brand-logo">
+            CA
+          </span>
+
+          <span class="brand-title">
+            College Administration
+          </span>
+
+        </div>
+
+
+        <div class="brand-content">
+
+          <h1 class="hero-heading">
+            Scheduling and college management, organized.
+          </h1>
+
+
+          <p class="hero-description">
+
+            One secure workspace for administrators,
+            instructors, and students.
+
+            Manage class schedules, enrollment,
+            rooms, and academic records without
+            duplicate pages.
+
+          </p>
+
+
+          <ul class="feature-list">
+
+            <li class="feature-item">
+
+              <span class="feature-dot"></span>
+
+              Role-based dashboards and permissions
+
+            </li>
+
+
+            <li class="feature-item">
+
+              <span class="feature-dot"></span>
+
+              Conflict-checked schedules and enrollment
+
+            </li>
+
+
+            <li class="feature-item">
+
+              <span class="feature-dot"></span>
+
+              Activity history with no permanent deletion tools
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="brand-footer">
+
+        College Administration - Learning, organized.
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================================================
+         LOGIN FORM
+         ==================================================== -->
+
+    <section class="form-section">
+
+
+      <div class="portal-tag">
+        SECURE PORTAL
+      </div>
+
+
+      <h2 class="form-title">
+        Sign in
+      </h2>
+
+
+      <p class="form-subtitle">
+
+        Use your email address or username
+        and password.
+
+      </p>
+
+
+      <div
+        id="message"
+        class="login-message"
+      ></div>
+
+
+      <form
+        id="loginForm"
+        class="login-form"
+      >
+
+
+        <div class="input-group">
+
+          <label
+            class="input-label"
+            for="identifier"
+          >
+            Email or username
+          </label>
+
+
+          <div class="input-wrapper">
+
+            <input
+              type="text"
+              id="identifier"
+              name="identifier"
+              class="input-field"
+              placeholder="Enter your email or username"
+              autocomplete="username"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <div class="input-group">
+
+          <label
+            class="input-label"
+            for="password"
+          >
+            Password
+          </label>
+
+
+          <div class="input-wrapper">
+
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="input-field"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <button
+          id="loginButton"
+          type="submit"
+          class="btn-submit"
+        >
+          Login
+        </button>
+
+
+      </form>
+
+
+
+      <div class="form-footer-links">
+
+        Need an account?
+
+        <a href="/register">
+          Register an Account
+        </a>
+
+      </div>
+
+
+
+      <div class="recovery-box">
+
+        <strong>
+          Password recovery:
+        </strong>
+
+        Contact the college system administrator
+        to verify your identity and reset your
+        account password.
+
+        Passwords are never shown or sent
+        in plain text.
+
+      </div>
+
+
+    </section>
+
+
+  </div>
+
+
+  <script
+    src="/js/login.js"
+    defer
+  ></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>College Administration  -  Sign In</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-brand">
+      <div>
+        <div class="brand-line"><span class="brand-mark">CA</span><span>College Administration</span></div>
+        <h1>Scheduling and college management, organized.</h1>
+        <p>One secure workspace for administrators, instructors, and students. Manage class schedules, enrollment, rooms, and academic records without duplicate pages.</p>
+        <div class="auth-features">
+          <div class="auth-feature"><span class="auth-feature-dot"></span> Role-based dashboards and permissions</div>
+          <div class="auth-feature"><span class="auth-feature-dot"></span> Conflict-checked schedules and enrollment</div>
+          <div class="auth-feature"><span class="auth-feature-dot"></span> Activity history with no permanent deletion tools</div>
+        </div>
+      </div>
+      <div class="small muted">College Administration  -  Learning, organized.</div>
+    </section>
+    <section class="auth-form-side">
+      <div class="auth-card">
+        <div class="auth-eyebrow">Secure portal</div>
+        <h2>Sign in</h2>
+        <p>Use your email address or username and password.</p>
+        <div id="message" class="notice hidden"></div>
+        <form id="loginForm" class="form-grid one" autocomplete="on">
+          <div class="form-field"><label for="login">Email or username</label><input class="input" id="login" name="login" autocomplete="username" required maxlength="254"></div>
+          <div class="form-field"><label for="password">Password</label><input class="input" id="password" name="password" type="password" autocomplete="current-password" required maxlength="128"></div>
+          <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+        <div class="auth-footer">
+          Need an account? <a href="/register">Register an Account</a><br><br>
+          <strong>Password recovery:</strong> Contact the college system administrator to verify your identity and reset your account password. Passwords are never shown or sent in plain text.
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="/js/login.js" defer></script>
+</body>
+</html>
+

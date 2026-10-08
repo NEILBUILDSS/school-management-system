@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>College Administration - Register</title>
+
+  <link rel="stylesheet" href="/css/register.css">
+</head>
+
+<body>
+
+<main class="register-shell">
+
+  <div class="brand-row">
+
+    <div class="brand-logo">
+      CA
+    </div>
+
+    <div class="brand-name">
+      College Administration
+    </div>
+
+  </div>
+
+
+  <div class="portal-pill">
+
+    <span class="portal-dot"></span>
+
+    ACCOUNT REGISTRATION
+
+  </div>
+
+
+  <h1>Create your account</h1>
+
+  <p class="subtitle">
+    Choose your role and enter the basic information required
+    to access the college portal.
+  </p>
+
+
+  <div
+    id="message"
+    class="notice"
+  ></div>
+
+
+  <div class="role-choice">
+
+    <button
+      type="button"
+      class="role-btn"
+      data-role="Student"
+    >
+      <strong>Student</strong>
+
+      <span>
+        Access your subjects, schedules and profile.
+      </span>
+    </button>
+
+
+    <button
+      type="button"
+      class="role-btn"
+      data-role="Instructor"
+    >
+      <strong>Instructor</strong>
+
+      <span>
+        Access teaching assignments and enrolled students.
+      </span>
+    </button>
+
+  </div>
+
+
+  <form
+    id="registerForm"
+    class="hidden"
+  >
+
+    <input
+      type="hidden"
+      id="role"
+      name="role"
+    >
+
+
+    <div class="form-grid">
+
+
+      <div class="form-section-title">
+        Account Information
+      </div>
+
+
+      <div class="form-field role-student">
+
+        <label>Student ID</label>
+
+        <input
+          class="input"
+          name="studentId"
+          maxlength="50"
+        >
+
+      </div>
+
+
+      <div class="form-field role-instructor">
+
+        <label>Instructor ID</label>
+
+        <input
+          class="input"
+          name="instructorId"
+          maxlength="50"
+        >
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label>Username</label>
+
+        <input
+          class="input"
+          name="username"
+          maxlength="50"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-section-title">
+        Personal Information
+      </div>
+
+
+      <div class="form-field">
+
+        <label>First Name</label>
+
+        <input
+          class="input"
+          name="firstName"
+          maxlength="80"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label>Middle Name</label>
+
+        <input
+          class="input"
+          name="middleName"
+          maxlength="80"
+        >
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label>Last Name</label>
+
+        <input
+          class="input"
+          name="lastName"
+          maxlength="80"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label>Email</label>
+
+        <input
+          class="input"
+          type="email"
+          name="email"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label>Contact Number</label>
+
+        <input
+          class="input"
+          name="contactNumber"
+          maxlength="40"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-field role-student">
+
+        <label>Course</label>
+
+        <select
+          class="select"
+          name="course"
+        >
+
+          <option value="IT">
+            IT - BS Information Technology
+          </option>
+
+          <option value="CS">
+            CS - BS Computer Science
+          </option>
+
+          <option value="IS">
+            IS - BS Information Systems
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-field role-student">
+
+        <label>Year Level</label>
+
+        <select
+          class="select"
+          name="yearLevel"
+        >
+
+          <option value="1">1st Year</option>
+          <option value="2">2nd Year</option>
+          <option value="3">3rd Year</option>
+          <option value="4">4th Year</option>
+
+        </select>
+
+      </div>
+
+
+      <div class="form-field role-instructor full">
+
+        <label>Department</label>
+
+        <input
+          class="input"
+          name="department"
+          maxlength="120"
+        >
+
+      </div>
+
+
+      <div class="form-section-title">
+        Security
+      </div>
+
+
+      <div class="form-field">
+
+        <label>Password</label>
+
+        <input
+          class="input"
+          type="password"
+          name="password"
+          minlength="8"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-field">
+
+        <label>Confirm Password</label>
+
+        <input
+          class="input"
+          type="password"
+          name="confirmPassword"
+          minlength="8"
+          required
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="register-help">
+
+      After registration, students can complete their address,
+      family, emergency contact and education information from
+      their Profile page.
+
+    </div>
+
+
+    <div class="form-actions">
+
+      <a
+        href="/"
+        class="btn btn-secondary"
+      >
+        Back to Sign In
+      </a>
+
+
+      <button
+        type="submit"
+        class="btn btn-primary"
+      >
+        Register Account
+      </button>
+
+    </div>
+
+  </form>
+
+</main>
+
+
+<script
+  src="/js/register.js"
+  defer
+></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>College Administration · Register</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-brand">
+      <div>
+        <div class="brand-line"><span class="brand-mark">CA</span><span>College Administration</span></div>
+        <h1>Create your college portal account.</h1>
+        <p>Public registration is available only to students and instructors. Administrator accounts are created separately by an authorized administrator.</p>
+      </div>
+      <div class="small muted">After registration, you will return to the unified login page.</div>
+    </section>
+    <section class="auth-form-side">
+      <div class="auth-card">
+        <div class="auth-eyebrow">Account registration</div>
+        <h2>Choose your role</h2>
+        <p>Select Student or Instructor before completing your account information.</p>
+        <div id="message" class="notice hidden"></div>
+        <div class="role-choice">
+          <button type="button" class="role-btn" data-role="Student"><strong>Student</strong><span>Academic schedule and subjects</span></button>
+          <button type="button" class="role-btn" data-role="Instructor"><strong>Instructor</strong><span>Teaching assignments and students</span></button>
+        </div>
+        <form id="registerForm" class="hidden">
+          <input type="hidden" id="role" name="role">
+          <div class="form-grid">
+            <div class="form-field role-student"><label>Student ID</label><input class="input" name="studentId" maxlength="50"></div>
+            <div class="form-field role-instructor"><label>Instructor ID</label><input class="input" name="instructorId" maxlength="50"></div>
+            <div class="form-field"><label>Username</label><input class="input" name="username" maxlength="50" autocomplete="username" required></div>
+            <div class="form-field"><label>First name</label><input class="input" name="firstName" maxlength="80" required></div>
+            <div class="form-field"><label>Middle name <span class="muted">(optional)</span></label><input class="input" name="middleName" maxlength="80"></div>
+            <div class="form-field"><label>Last name</label><input class="input" name="lastName" maxlength="80" required></div>
+            <div class="form-field"><label>Email</label><input class="input" type="email" name="email" maxlength="254" autocomplete="email" required></div>
+            <div class="form-field"><label>Contact number</label><input class="input" name="contactNumber" maxlength="40" required></div>
+            <div class="form-field role-student"><label>Course</label><select class="select" name="course"><option value="IT">IT — BS Information Technology</option><option value="CS">CS — BS Computer Science</option><option value="IS">IS — BS Information Systems</option></select></div>
+            <div class="form-field role-student"><label>Year level</label><select class="select" name="yearLevel"><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option><option value="4">4th Year</option></select></div>
+            <div class="form-field role-instructor full"><label>Department</label><input class="input" name="department" maxlength="120"></div>
+            <div class="form-field"><label>Password</label><input class="input" type="password" name="password" minlength="8" maxlength="128" autocomplete="new-password" required></div>
+            <div class="form-field"><label>Confirm password</label><input class="input" type="password" name="confirmPassword" minlength="8" maxlength="128" autocomplete="new-password" required></div>
+          </div>
+          <div class="form-actions"><a class="btn btn-secondary" href="/">Back to Login</a><button class="btn btn-primary" type="submit">Register Account</button></div>
+        </form>
+        <div id="backOnly" class="auth-footer"><a href="/">← Back to Login</a></div>
+      </div>
+    </section>
+  </main>
+  <script src="/js/register.js" defer></script>
+</body>
+</html>

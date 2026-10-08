@@ -1,0 +1,629 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>College Administration · Register</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="auth-page register-page">
+
+<main class="auth-shell">
+
+<section class="auth-brand">
+  <div>
+    <div class="brand-line">
+      <span class="brand-mark">CA</span>
+      <span>College Administration</span>
+    </div>
+
+    <h1>Create your college portal account.</h1>
+
+    <p>
+      Public registration is available only to students and
+      instructors. Administrator accounts are created separately.
+    </p>
+  </div>
+
+  <div class="small muted">
+    After successful registration, you will return to the login page.
+  </div>
+</section>
+
+
+<section class="auth-form-side">
+
+<div class="auth-card register-card">
+
+<div class="auth-eyebrow">Account registration</div>
+
+<h2>Choose your role</h2>
+
+<p>
+  Select Student or Instructor before completing your information.
+</p>
+
+<div id="message" class="notice hidden"></div>
+
+
+<div class="role-choice">
+
+<button type="button"
+        class="role-btn"
+        data-role="Student">
+
+  <strong>Student</strong>
+  <span>Academic schedule and subjects</span>
+
+</button>
+
+
+<button type="button"
+        class="role-btn"
+        data-role="Instructor">
+
+  <strong>Instructor</strong>
+  <span>Teaching assignments and students</span>
+
+</button>
+
+</div>
+
+
+<form id="registerForm" class="hidden">
+
+<input type="hidden" id="role" name="role">
+
+
+<div class="form-grid">
+
+
+<!-- ACCOUNT -->
+
+<div class="form-section-title full">
+Account & Identity
+</div>
+
+
+<div class="form-field role-student">
+
+<label>Student ID</label>
+
+<input class="input"
+       name="studentId"
+       maxlength="50">
+
+</div>
+
+
+<div class="form-field role-instructor">
+
+<label>Instructor ID</label>
+
+<input class="input"
+       name="instructorId"
+       maxlength="50">
+
+</div>
+
+
+<div class="form-field">
+
+<label>Username</label>
+
+<input class="input"
+       name="username"
+       maxlength="50"
+       required>
+
+</div>
+
+
+<div class="form-field">
+
+<label>First Name</label>
+
+<input class="input"
+       name="firstName"
+       maxlength="80"
+       required>
+
+</div>
+
+
+<div class="form-field">
+
+<label>Middle Name (optional)</label>
+
+<input class="input"
+       name="middleName"
+       maxlength="80">
+
+</div>
+
+
+<div class="form-field">
+
+<label>Last Name</label>
+
+<input class="input"
+       name="lastName"
+       maxlength="80"
+       required>
+
+</div>
+
+
+<div class="form-field">
+
+<label>Email</label>
+
+<input class="input"
+       type="email"
+       name="email"
+       maxlength="254"
+       required>
+
+</div>
+
+
+<div class="form-field">
+
+<label>Mobile / Contact Number</label>
+
+<input class="input"
+       name="contactNumber"
+       maxlength="40"
+       required>
+
+</div>
+
+
+
+<!-- STUDENT ACADEMIC -->
+
+<div class="form-field role-student">
+
+<label>Course</label>
+
+<select class="select" name="course">
+
+<option value="IT">
+IT — BS Information Technology
+</option>
+
+<option value="CS">
+CS — BS Computer Science
+</option>
+
+<option value="IS">
+IS — BS Information Systems
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-field role-student">
+
+<label>Year Level</label>
+
+<select class="select" name="yearLevel">
+
+<option value="1">1st Year</option>
+<option value="2">2nd Year</option>
+<option value="3">3rd Year</option>
+<option value="4">4th Year</option>
+
+</select>
+
+</div>
+
+
+
+<!-- INSTRUCTOR -->
+
+<div class="form-field role-instructor full">
+
+<label>Department</label>
+
+<input class="input"
+       name="department"
+       maxlength="120">
+
+</div>
+
+
+
+<!-- SECONDARY -->
+
+<div class="form-section-title full role-student">
+Secondary Information
+</div>
+
+
+<div class="form-field role-student">
+
+<label>Birth Place</label>
+
+<input class="input"
+       name="birthPlace">
+
+</div>
+
+
+<div class="form-field role-student">
+
+<label>Religion</label>
+
+<input class="input"
+       name="religion">
+
+</div>
+
+
+<div class="form-field role-student">
+
+<label>Citizenship</label>
+
+<input class="input"
+       name="citizenship">
+
+</div>
+
+
+<div class="form-field role-student">
+
+<label>Civil Status</label>
+
+<input class="input"
+       name="civilStatus"
+       placeholder="Example: Single">
+
+</div>
+
+
+<div class="form-field role-student">
+
+<label>Telephone No.</label>
+
+<input class="input"
+       name="telephoneNumber">
+
+</div>
+
+
+
+<!-- CURRENT ADDRESS -->
+
+<div class="form-section-title full role-student">
+Current Address
+</div>
+
+
+<div class="form-field role-student">
+<label>House No.</label>
+<input class="input" name="currentHouseNo">
+</div>
+
+
+<div class="form-field role-student">
+<label>Street / Purok</label>
+<input class="input" name="currentStreetNo">
+</div>
+
+
+<div class="form-field role-student">
+<label>Barangay</label>
+<input class="input" name="currentBarangay">
+</div>
+
+
+<div class="form-field role-student">
+<label>City / Municipality</label>
+<input class="input" name="currentCity">
+</div>
+
+
+<div class="form-field role-student">
+<label>Province</label>
+<input class="input" name="currentProvince">
+</div>
+
+
+<div class="form-field role-student">
+<label>ZIP Code</label>
+<input class="input" name="currentZipCode">
+</div>
+
+
+
+<!-- PERMANENT ADDRESS -->
+
+<div class="form-section-title full role-student">
+Permanent Address
+</div>
+
+
+<div class="form-field role-student">
+<label>House No.</label>
+<input class="input" name="permanentHouseNo">
+</div>
+
+
+<div class="form-field role-student">
+<label>Street / Purok</label>
+<input class="input" name="permanentStreetNo">
+</div>
+
+
+<div class="form-field role-student">
+<label>Barangay</label>
+<input class="input" name="permanentBarangay">
+</div>
+
+
+<div class="form-field role-student">
+<label>City / Municipality</label>
+<input class="input" name="permanentCity">
+</div>
+
+
+<div class="form-field role-student">
+<label>Province</label>
+<input class="input" name="permanentProvince">
+</div>
+
+
+<div class="form-field role-student">
+<label>ZIP Code</label>
+<input class="input" name="permanentZipCode">
+</div>
+
+
+
+<!-- FAMILY -->
+
+<div class="form-section-title full role-student">
+Family Information
+</div>
+
+
+<div class="form-field role-student">
+<label>Father's Name</label>
+<input class="input" name="fatherName">
+</div>
+
+
+<div class="form-field role-student">
+<label>Father's Occupation</label>
+<input class="input" name="fatherOccupation">
+</div>
+
+
+<div class="form-field role-student">
+<label>Father's Mobile No.</label>
+<input class="input" name="fatherMobileNumber">
+</div>
+
+
+<div class="form-field role-student">
+<label>Mother's Name</label>
+<input class="input" name="motherName">
+</div>
+
+
+<div class="form-field role-student">
+<label>Mother's Occupation</label>
+<input class="input" name="motherOccupation">
+</div>
+
+
+<div class="form-field role-student">
+<label>Mother's Mobile No.</label>
+<input class="input" name="motherMobileNumber">
+</div>
+
+
+<div class="form-field role-student">
+<label>Guardian Name</label>
+<input class="input" name="guardianName">
+</div>
+
+
+<div class="form-field role-student">
+<label>Guardian Occupation</label>
+<input class="input" name="guardianOccupation">
+</div>
+
+
+<div class="form-field role-student">
+<label>Guardian Mobile No.</label>
+<input class="input" name="guardianMobileNumber">
+</div>
+
+
+
+<!-- EMERGENCY -->
+
+<div class="form-section-title full role-student">
+Emergency Contact
+</div>
+
+
+<div class="form-field role-student">
+<label>Name</label>
+<input class="input" name="emergencyName">
+</div>
+
+
+<div class="form-field role-student">
+<label>Relationship</label>
+<input class="input" name="emergencyRelationship">
+</div>
+
+
+<div class="form-field role-student">
+<label>Mobile No.</label>
+<input class="input" name="emergencyMobileNumber">
+</div>
+
+
+
+<!-- EDUCATION -->
+
+<div class="form-section-title full role-student">
+Education Information
+</div>
+
+
+<div class="form-field role-student">
+<label>Primary School</label>
+<input class="input" name="primarySchool">
+</div>
+
+
+<div class="form-field role-student">
+<label>Primary School Address</label>
+<input class="input" name="primaryAddress">
+</div>
+
+
+<div class="form-field role-student">
+<label>Primary School Year</label>
+<input class="input"
+       name="primarySchoolYear"
+       placeholder="Example: 2017-2018">
+</div>
+
+
+<div class="form-field role-student">
+<label>Junior High / Secondary School</label>
+<input class="input" name="secondarySchool">
+</div>
+
+
+<div class="form-field role-student">
+<label>Secondary Address</label>
+<input class="input" name="secondaryAddress">
+</div>
+
+
+<div class="form-field role-student">
+<label>Secondary School Year</label>
+<input class="input" name="secondarySchoolYear">
+</div>
+
+
+<div class="form-field role-student">
+<label>Senior High School</label>
+<input class="input" name="seniorHighSchool">
+</div>
+
+
+<div class="form-field role-student">
+<label>Senior High Address</label>
+<input class="input" name="seniorHighAddress">
+</div>
+
+
+<div class="form-field role-student">
+<label>Senior High School Year</label>
+<input class="input" name="seniorHighSchoolYear">
+</div>
+
+
+<div class="form-field role-student">
+<label>School Last Attended</label>
+<input class="input" name="lastAttendedSchool">
+</div>
+
+
+<div class="form-field role-student">
+<label>School Address</label>
+<input class="input" name="lastAttendedAddress">
+</div>
+
+
+<div class="form-field role-student">
+<label>School Year</label>
+<input class="input" name="lastAttendedSchoolYear">
+</div>
+
+
+
+<!-- PASSWORD -->
+
+<div class="form-section-title full">
+Security
+</div>
+
+
+<div class="form-field">
+
+<label>Password</label>
+
+<input class="input"
+       type="password"
+       name="password"
+       minlength="8"
+       required>
+
+</div>
+
+
+<div class="form-field">
+
+<label>Confirm Password</label>
+
+<input class="input"
+       type="password"
+       name="confirmPassword"
+       minlength="8"
+       required>
+
+</div>
+
+
+</div>
+
+
+<div class="form-actions">
+
+<a class="btn btn-secondary"
+   href="/">
+Back to Login
+</a>
+
+<button class="btn btn-primary"
+        type="submit">
+Register Account
+</button>
+
+</div>
+
+</form>
+
+
+<div id="backOnly"
+     class="auth-footer">
+
+<a href="/">
+← Back to Login
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+<script src="/js/register.js" defer></script>
+
+</body>
+</html>
